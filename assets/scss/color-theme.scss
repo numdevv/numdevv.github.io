@@ -1,0 +1,94 @@
+// Variables for light and dark themes
+$primary-color: #6D53A6;
+$secondary-color: #B0A4E3;
+$background-color: #F7F7F7;
+$text-color: #333;
+
+$primary-color-dark: #231E39;
+$secondary-color-dark: #524986;
+$background-color-dark: #231E39;
+$text-color-dark: #F7F7F7;
+
+// Default to light theme
+$theme-primary-color: $primary-color;
+$theme-secondary-color: $secondary-color;
+$theme-background-color: $background-color;
+$theme-text-color: $text-color;
+
+// Define dark theme mixin
+@mixin dark-theme {
+  $theme-primary-color: $primary-color-dark;
+  $theme-secondary-color: $secondary-color-dark;
+  $theme-background-color: $background-color-dark;
+  $theme-text-color: $text-color-dark;
+}
+
+// Toggle switch styles
+.toggle {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 34px;
+  margin: 10px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $text-color;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle input:checked+.slider {
+  background-color: $theme-primary-color;
+}
+
+.toggle input:checked+.slider:before {
+  transform: translateX(26px);
+  background-color: $theme-secondary-color;
+}
+
+// Light theme styles
+body {
+  background-color: $primary-color-dark;
+  color: $theme-text-color;
+}
+
+// Dark theme styles
+body.dark {
+  background-color: $theme-background-color;
+  color: $theme-text-color;
+}
+
+body.dark .toggle .slider:before {
+  left: 30px;
+  background-color: $theme-primary-color;
+}
+
+// Dark theme mixin styles
+body.dark {
+  @include dark-theme;
+}

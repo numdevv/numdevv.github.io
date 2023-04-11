@@ -1,0 +1,63 @@
+// Define custom colors
+$primary-color: #6D53A6;
+$secondary-color: #F2EEAE;
+$success-color: #28a745;
+$danger-color: #dc3545;
+$info-color: #17a2b8;
+$warning-color: #ffc107;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+
+// Color Scheme
+$primary-color: #6D53A6;
+// $secondary-color: #CFC5D0;
+$tertiary-color: #F0EBF4;
+$quaternary-color: #0B0C10;
+$quinary-color: #F8F8F8;
+
+// Dark Theme
+$dark-background-color: $quaternary-color;
+$dark-font-color: $quinary-color;
+$dark-primary-color: lighten($primary-color, 10%);
+$dark-secondary-color: $secondary-color;
+$dark-tertiary-color: $tertiary-color;
+
+// Light Theme
+$light-background-color: $quinary-color;
+$light-font-color: $quaternary-color;
+$light-primary-color: $primary-color;
+$light-secondary-color: lighten($secondary-color, 20%);
+$light-tertiary-color: $tertiary-color;
+
+
+// Use the colors in your styles
+// .navbar {
+//     background-color: $primary-color;
+//     color: $light-color;
+//     $text-color: #333333;
+// }
+
+// .logo {
+//     width: auto;
+//     height: 64px;
+// }
+
+// .color-mode-box {
+//     background: $secondary-color;
+//     border-radius: .5rem;
+
+// }
+
+// .dropdown-toggle::after {
+//     color: #7C68A6;
+// }
+
+// .another-element {
+//     background-color: $info-color;
+//     color: $dark-color;
+// }
+
+// Variables
+$header-height: 100vh;
+$navbar-height: 80px;
+$transition-duration: 1s;
